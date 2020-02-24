@@ -45,7 +45,7 @@ public class SingleLinkedList<E> implements SingleADT<E> {
 
     @Override
     public void add(E item) {
-
+        add(size, item);
     }
 
     @Override
