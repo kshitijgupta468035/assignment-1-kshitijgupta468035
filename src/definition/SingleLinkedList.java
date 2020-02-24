@@ -30,6 +30,8 @@ public class SingleLinkedList<E> implements SingleADT<E> {
     }
 
     private static class Node<E> implements Comparable<E> {
+        private E data;
+        private Node<E> next;
 
         @Override
         public int compareTo(E o) {
