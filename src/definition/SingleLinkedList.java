@@ -48,6 +48,18 @@ public class SingleLinkedList<E> implements SingleADT<E> {
         add(size, item);
     }
 
+    private void removeFirst() throws IndexOutOfBoundsException {
+        if (head == null) {
+            throw new IndexOutOfBoundsException(Integer.toString(size));
+        } else {
+            head = head.next;
+            size--;
+        }
+    }
+
+
+
+
     @Override
     public void remove() {
 
