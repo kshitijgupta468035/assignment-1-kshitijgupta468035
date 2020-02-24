@@ -38,6 +38,9 @@ public class Main {
                 case 4:
                     removeContact(list, list1, list2);
                     break;
+                case 5:
+                    b = false;
+                    break;
             }
         } while (b);
     }
