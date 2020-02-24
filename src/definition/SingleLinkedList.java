@@ -57,6 +57,15 @@ public class SingleLinkedList<E> implements SingleADT<E> {
         }
     }
 
+    private void removeAfter(Node<E> node) {
+        if (node.next == null) {
+            throw new IndexOutOfBoundsException(Integer.toString(size));
+        } else {
+            node.next = node.next.getNext();
+            size--;
+        }
+    }
+
 
 
 
