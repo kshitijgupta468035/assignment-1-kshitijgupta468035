@@ -27,6 +27,11 @@ public class Main {
             switch (choice) {
                 case 1:
                     addContact(list, list1, list2);
+                    break;
+                case 2:
+                    list.sort();
+                    list.print();
+                    break;
             }
         } while (b);
     }
@@ -72,4 +77,6 @@ public class Main {
         Collections.sort(list2);
         return list;
     }
+
+
 }
