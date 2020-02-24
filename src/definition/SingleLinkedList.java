@@ -23,6 +23,17 @@ public class SingleLinkedList<E> implements SingleADT<E> {
         return response;
     }
 
+    private void addFirst(E item) {
+        head = new Node<>(item, head);
+        size++;
+    }
+
+    private void addAfter(Node<E> node, E item) {
+        Node<E> node1 = new Node<>(item, node.next);
+        node.next = node1;
+        size++;
+    }
+
     @Override
     public void add(E item) {
 
