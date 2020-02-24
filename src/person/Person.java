@@ -15,11 +15,12 @@ public class Person implements Comparable<Person> {
     public Person() {
     }
 
-    public Person(String firstName, String lastName, String email, long phoneNumber) {
+    public Person(String firstName, String lastName, String email, long phoneNumber, List<Long> list) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
+        this.list = list;
     }
 
     @Override
