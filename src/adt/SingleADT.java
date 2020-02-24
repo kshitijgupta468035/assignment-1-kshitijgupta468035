@@ -1,4 +1,4 @@
 package adt;
 
-public interface SingleADT {
+public interface SingleADT<E> {
 }
