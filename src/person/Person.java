@@ -72,6 +72,18 @@ public class Person implements Comparable<Person> {
     }
 
     @Override
+    public String toString() {
+        return "-------- * -------- * -------- * --------\n" +
+                "First Name: " + firstName + "\n" +
+                "Last Name: " + lastName + "\n" +
+                (list.size() == 1 ? "Contact Number: " : "Contact Number(s):") + addString() + "\n" +
+                "Email Address: " + email + "\n" +
+                "-------- * -------- * -------- * --------";
+    }
+
+
+
+    @Override
     public int compareTo(Person o) {
         return 0;
     }
