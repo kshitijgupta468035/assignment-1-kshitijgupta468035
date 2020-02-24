@@ -35,6 +35,9 @@ public class Main {
                 case 3:
                     searchContact(list, list2);
                     break;
+                case 4:
+                    removeContact(list, list1, list2);
+                    break;
             }
         } while (b);
     }
@@ -101,6 +104,23 @@ public class Main {
                 }
             }
         }
+        return list;
+    }
+
+    public static SingleLinkedList removeContact(SingleLinkedList list, ArrayList list1, ArrayList list2) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Here are all your contacts:");
+        int k = 1;
+        for (int i = 0; i < list1.size(); i++) {
+            System.out.println(i + 1 + "." + list1.get(i));
+            k++;
+        }
+        System.out.print("Press the number against the contact to delete it:");
+        int i = scanner.nextInt();
+        list.remove(i);
+        System.out.println(list1.get(i - 1) + "'s contact deleted from list!");
+        list1.remove(i - 1);
+        list2.remove(i - 1);
         return list;
     }
 
