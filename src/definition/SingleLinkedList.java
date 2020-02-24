@@ -38,6 +38,14 @@ public class SingleLinkedList<E> implements SingleADT<E> {
             this.next = next;
         }
 
+        public E getData() {
+            return data;
+        }
+
+        public Node<E> getNext() {
+            return next;
+        }
+
         @Override
         public int compareTo(E o) {
             return 0;
