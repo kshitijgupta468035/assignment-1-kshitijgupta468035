@@ -11,6 +11,18 @@ public class SingleLinkedList<E> implements SingleADT<E> {
         return size;
     }
 
+    public Node<E> getNode(int index) throws IndexOutOfBoundsException {
+        Node<E> response = head;
+        if (index < 0 && index > size) {
+            throw new IndexOutOfBoundsException(Integer.toString(index));
+        } else {
+            for (int i = 0; i < index && head != null; i++) {
+                response = response.next;
+            }
+        }
+        return response;
+    }
+
     @Override
     public void add(E item) {
 
