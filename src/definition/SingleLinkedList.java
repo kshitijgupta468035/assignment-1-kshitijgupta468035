@@ -7,6 +7,10 @@ public class SingleLinkedList<E> implements SingleADT<E> {
     private int size = 0;
     private Node<E> head = null;
 
+    public int getSize() {
+        return size;
+    }
+
     @Override
     public void add(E item) {
 
