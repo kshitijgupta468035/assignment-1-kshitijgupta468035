@@ -59,7 +59,17 @@ public class Person implements Comparable<Person> {
         return list;
     }
 
-
+    private StringBuilder addString() {
+        StringBuilder sb = new StringBuilder();
+        int k = 0;
+        for (long i : list) {
+            sb.append(i);
+            k++;
+            sb.append((k <= list.size() - 1 ? "," : ""));
+            sb.append(" ");
+        }
+        return sb;
+    }
 
     @Override
     public int compareTo(Person o) {
