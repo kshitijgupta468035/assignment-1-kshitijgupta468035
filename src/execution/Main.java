@@ -14,7 +14,7 @@ public class Main {
         ArrayList<String> list2 = new ArrayList<>();
 
         SingleLinkedList<Person> list = new SingleLinkedList<Person>();
-        boolean b = true;
+        boolean value = true;
         do {
             System.out.println("Welcome to Kshitij Gupta's Contact List Application\n" +
                     "Press 1 to add a new contact in list\n" +
@@ -39,10 +39,10 @@ public class Main {
                     removeContact(list, list1, list2);
                     break;
                 case 5:
-                    b = false;
+                    value = false;
                     break;
             }
-        } while (b);
+        } while (value);
     }
 
     public static SingleLinkedList addContact(SingleLinkedList list, ArrayList list1, ArrayList list2) {
