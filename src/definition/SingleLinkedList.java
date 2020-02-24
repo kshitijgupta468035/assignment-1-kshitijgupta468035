@@ -75,14 +75,9 @@ public class SingleLinkedList<E> implements SingleADT<E> {
             removeAfter(getNode(index - 2));
     }
 
-
-
-
-
-
     @Override
     public void remove() {
-
+        remove(size);
     }
 
     @Override
