@@ -85,4 +85,21 @@ public class Person implements Comparable<Person> {
     public int compareTo(Person person) {
         return firstName.compareTo(person.firstName);
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        Person guest = (Person) obj;
+        return firstName.compareToIgnoreCase(guest.firstName) >= 1;
+    }
 }
